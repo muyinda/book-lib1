@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{{ url_for('static', filename = 'myreads.jpeg') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myReads</title>
+</head>
+<body style="background-color:#fff;">
+
+        {% extends "layout.html" %}
+
+        {% block anchor %}
+            <a class="nav-link " href="{{ url_for('logout') }}">
+                Logout <strong>{{ user_email }}</strong>
+            </a>
+        {% endblock %}
+        
+        
+        {% block body %}
+            {% if message %}
+        
+                <div class="alert alert-danger" role="alert">
+                    <h4 class="alert-heading">Sorry!! Something went wrong</h4><br>
+                    <p>
+                      {{ error_message }}
+                    </p>
+                </div>
+                <br>
+                <h4>{{ message }} </h4>
+        
+            {% else %}
+                <h1 class="h3 font-weight-normal">Matching Results: </h1>
+        
+            {% endif %}
+        
+            {% for book in book_list %}
+                <ul>
+                    <a href="#"> <b>{{ book.title }}</b> by {{ book.author }} </a>
+                </ul>
+            {% endfor %}
+        
+        {% endblock %}
+
+</body>
+</html>

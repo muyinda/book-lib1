@@ -1,0 +1,39 @@
+body{
+    /* background-color: grey; */
+    background-image: url(pk.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+}
+.navbar {
+    border-radius: 0;
+}
+
+a.navbar-brand {
+    font-family:'algeria, san-serif' ;
+    font-size: 40px;
+    text-align: center;
+
+}
+
+p {
+    text-align: center;
+    font-size: 50px;
+}
+
+form p {
+    text-align: center;
+}
+
+#box{
+    color: rgb(37, 34, 14);
+}
+#login{
+    text-align: center;
+    font-size: 40px;
+    font-family: serif;
+}
+.content{
+    border:2px white solid !important;
+    co
+}
