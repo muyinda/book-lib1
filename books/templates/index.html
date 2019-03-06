@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block anchor %}
+            
+        {% if current_user.is_authenticated %}
+            <a class="nav-link " href="{{ url_for('logout') }}">
+                Logout <strong>{{ username }}</strong>
+            </a>
+        {% endif %}
+
+{% endblock %}
+
+{% block body %}
+    <br>
+    <p>
+        Karibu kwa  <strong>MyReads</strong> Look no further...come checkout these books!!
+    </p>
+ <br><br><br><br>
+    <a class="btn-large blue" href="{{ url_for('login') }}">
+            Login </a>
+        
+         <a class="btn-large blue " href="{{ url_for('register') }}">
+             Register </a>
+          
+
+{% endblock %}
